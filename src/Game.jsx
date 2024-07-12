@@ -10,9 +10,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function Game(){
     const [towerState, setTowerState] = useState({
-        t1: [],
+        t1: [...discs],
         t2: [],
-        t3: [...discs]
+        t3: []
     })
 
     useEffect(() => {
@@ -84,6 +84,8 @@ export default function Game(){
                 return;
             }
         }
+
+
 
         setTowerState({
             t1: t1Arr,
